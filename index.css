@@ -7,6 +7,12 @@
     font-family: "Roboto", sans-serif;
 }
 
+button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+
 
 /* Biginning of Header */
 
@@ -34,6 +40,12 @@ header{
 .logo-menu, .third{
     display: flex;
     align-items: center;
+}
+
+.letter img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
 }
 
 .menu{
@@ -114,11 +126,11 @@ margin: 0 8px;
 }
 
 
-.letter{
+/* .letter{
     background: rgb(112, 28, 28);
     border-radius: 100%;
     font-size: 20px;
-}
+} */
 
 .logo-menu div, .third button{
     margin-left: 40px;
@@ -394,8 +406,12 @@ main{
     font-weight: 600;
 }
 
-.comment-text{
+.comment-text, .comment-text a{
     font-size: 14px;
+}
+
+.comment-text a{
+    color: blue;
 }
 
 .user-comments-buttons{
@@ -458,6 +474,107 @@ color: #fff;
 }
 
 
+.right-main-section{
+    grid-area: recommended-videos;
+}
+
+.chat-section{
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 10px 0;
+}
+
+.button-label-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+
+  }
+
+  .button-label {
+    background-color: #cecece;
+    border-radius: 25px;
+    outline: thin solid grey;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    
+    height: 32px;
+  
+    padding: 0px 15px;
+    
+    display: flex;
+    align-items: center;
+  }
+
+  .button-label:hover {
+    background: #878787;
+  }
+
+  #selected-item {
+    background: black;
+    color: #fff;
+    outline: none;
+  }
+
+
+  .recommended-video {
+    width: 100%;
+    height: 94px;
+  
+    margin: 8px 0px;
+  
+    display: flex;
+    align-items: center;
+  }
+
+  .miniature {
+    background: #000;
+  
+    width: 168px;
+    height: 100%;
+  
+    margin: 0 8px 0 0;
+  
+    display: flex;
+    justify-content: center;
+  }
+
+  .miniature iframe {
+    width: 100%;
+  }
+
+  
+.video-info {
+    width: 50%;
+    height: 100%;
+  }
+
+  .video-info a{
+      text-decoration: none;
+  }
+  
+  .miniature-title {
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    margin: 0 0 5px 0;
+  }
+  
+  .miniature-info {
+    color: #aaaaaa;
+    font-size: 12px;
+    margin: 2px 0;
+  }
+  
+  .miniature-info:nth-child(1) {
+    font-size: 14px;
+  }
+
+
+
+
 
 
 
@@ -468,180 +585,96 @@ color: #fff;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  @media only screen and (max-width: 1200px) {
+    main {
+      padding: 70px 10px 0 10px;
+  
+      display: grid;
+      grid-template-areas: 
+        "main-video"
+        "recommended-videos"
+        "comments"
+      ;
+    }
+  
+    .left-main-section, .right-main-section, .comments-section {
+      width: 100%;
+    }
+  
+    #main-video {
+      min-width: 800px;
+    }
+  
+    .departure-date {
+      display: none;
+    }
+  
+    .buttons-zone {
+      width: 80%;
+    }
+  
+  }
+  
+  @media only screen and (max-width: 600px) {
+    main {
+      padding: 70px 5px 0 5px;
+    }
+  
+    .search-bar {
+      display: none;
+    }
+  
+    .nav-search-bar {
+      justify-content: flex-end;
+    }
+  
+    #nav-search-button {
+      background: transparent;
+      width: fit-content;
+    }
+  
+    .menu-icon-button {
+      margin: 0 2px 0 1px;
+    }
+  
+    .yt-icon-cont {
+      padding: 0 4px;
+    }
+  
+    #nav-mic-button {
+      background: transparent;
+      margin: 0;
+    }
+  
+    #main-video {
+      height: 300px;
+      min-width: 200px;
+    }
+  
+    .yt-icon-text {
+      display: none;
+    }
+  
+    .user-tools-cont * {
+      margin: 0 2px;
+    }
+  
+    .user-profile-icon {
+      margin: 0 5px 0 2px;
+    }
+    
+    .views {
+      display: none;
+    }
+  
+    .more-info-cont {
+      justify-content: center;
+    }
+  
+    .action-button {
+      margin: 0 8px;
+    }
+  }
 
 
 
@@ -654,176 +687,16 @@ color: #fff;
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-*{
-    font-size: 10px;
-}
-
-.logo img{
-    width: 50px;
-}
-
-header{
-    display: flex;
-    justify-content: space-around;
-}
-
-.logo-menu div, .third div{
-    margin-left: 10px;
-}
-
-form button {
-    width: 40px;
-    height: 25px;
-    cursor: pointer;
-  }
-
-  form input[type=text] {
-    /* font-size: 10px; */
-    width: 150px;
-    height: 25px;
-  }
-
-  .search form i{
-      margin-left: 10px;
-  }
-
-  .third{
-      margin-right: 0px;
-  }
-
-  main .frame iframe{
-    margin: 20px 0px 0px 7px;
-    width: 100%;
-    height: 500px;
-    overflow: auto;
-}
-
-.frame {
-    width: 100%;
-    height: 100px;
-    padding: 0vw 0vw 0vw 2vw;
-}
-
-
-
 
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 
-    *{
-        font-size: 15px;
-    }
-    
-    .logo img{
-        width: 70px;
-        margin-left: 20px;
-    }
-    
-    header{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .logo-menu div, .third div{
-        margin-left: 5px;
-    }
-    
-    form button {
-        width: 50px;
-        height: 25px;
-        cursor: pointer;
-      }
-    
-      form input[type=text] {
-        /* font-size: 10px; */
-        width: 200px;
-        height: 25px;
-      }
-    
-      .search form i{
-          margin-left: 10px;
-      }
-    
-      .third{
-          margin-right: 30px;
-      }
-    
-      main .frame iframe{
-        margin: 20px 0px 0px 7px;
-        width: 100%;
-        height: 500px;
-        overflow: auto;
-    }
-    
-    .frame {
-        width: 100%;
-        height: 100px;
-        padding: 0vw 0vw 0vw 3vw;
-    }
-    
-
-
-
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-    *{
-        font-size: 20px;
-    }
-    
-    .logo img{
-        width: 100px;
-        margin-left: 10px;
-    }
-    
-    header{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .logo-menu div, .third div{
-        margin-left: 15px;
-    }
-    
-    form button {
-        width: 50px;
-        height: 35px;
-        cursor: pointer;
-      }
-    
-      form input[type=text] {
-        /* font-size: 10px; */
-        width: 350px;
-        height: 35px;
-      }
-    
-      .search form i{
-          margin-left: 0px;
-      }
-    
-      .third{
-          margin-right: 70px;
-      }
-    
-      main .frame iframe{
-        margin: 20px 0px 0px 7px;
-        width: 100%;
-        height: 500px;
-        overflow: auto;
-    }
-    
-    .frame {
-        width: 100%;
-        height: 130px;
-        padding: 0vw 0vw 0vw 4vw;
-    }
-    
-
 
 
 }
@@ -831,286 +704,10 @@ form button {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 
-    *{
-        font-size: 20px;
-    }
-    
-    .logo img{
-        width: 100px;
-        margin-left: 10px;
-    }
-    
-    header{
-        display: flex;
-        justify-content: space-between;
-    }
-    
-    .logo-menu div, .third div{
-        margin-left: 15px;
-    }
-    
-    form button {
-        width: 50px;
-        height: 35px;
-        cursor: pointer;
-      }
-    
-      form input[type=text] {
-        /* font-size: 10px; */
-        width: 500px;
-        height: 35px;
-      }
-    
-      .search form i{
-          margin-left: 0px;
-      }
-    
-      .third{
-          margin-right: 70px;
-      }
-    
-      main .frame iframe{
-        margin: 20px 0px 0px 7px;
-        width: 100%;
-        height: 500px;
-        overflow: auto;
-    }
-    
-    /* .frame {
-        width: 100%;
-        height: 17vh;
-        padding: 0vw 30vw 2vw 5vw;
-    } */
-/* 
-    .frame {
-        border: 0vw 60vw 2vw 0vw;
-        background-color: green;
-    } */
-
-
-
 
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {
-    .frame {
-        width: 100%;
-        height: 17vh;
-        padding: 0vw 33vw 2vw 6vw;
-    }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-*{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-size: 20px;
-}
-
-
-/* Biginning of Header */
-
-/*
-.logo img{
-    width: 100px;
-}
-
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    height: 56px;
-
-    /* position: fixed; */
-  /*  top: 0;
-
-    z-index: 1;
-}
-  
-
-.logo-menu, .third{
-    display: flex;
-    align-items: center;
-}
-
-.menu{
-    border-radius: 50%;
-  text-align: center;
-
-  margin: 0 4px 0 12px;
-}
-
-.menu i {
-    font-size: 28px;
-
-    padding: 5px;
-  }
-
- .logo-cont{
-      padding: 0 16px;
-      margin: 0 20px 0 0;
-
-      display: flex;
-      align-items: center;
-  }
-
-  .logo{
-      width: 30px;
-
-      margin: 0 2px 0 0;
-  }
-
-  .logo-text{
-      font-size: 20px;
-      font-family: "Oswald", sans-serif;
-  }
-
-  .search{
-      width: 52%;
-
-      display: flex;
-      align-items: center;
-  }
-
-  .search-input{
-      background: rgb(228, 227, 227);
-      border-radius: 2px 0 0 2px;
-      border: 1px solid #000000;
-      color: black;
-      font-size: 16px;
-      outline: transparent;
-
-      width: 85%;
-      height: 40px;
-
-      padding: 2px 10px;
-  }
-
-  .search-input:focus{
-    outline: 1px thin black;
-}
-
-.search-icon{
-    background: rgb(228, 227, 227);
-    width: 64px;
-    height: 40px;
-    border: 1px solid black;
-}
-
-
-.mic-icon{
-    background: rgb(228, 227, 227);
-
-border-radius: 50%;
-margin: 0 8px;
-}
-
-.mic-icon i{
-    font-size: 20px;
-    padding: 10px;
-}
-
-
-.letter{
-    background: rgb(112, 28, 28);
-    border-radius: 100%;
-    font-size: 20px;
-}
-
-.logo-menu div, .third button{
-    margin-left: 40px;
-}
-
-
-
-form button {
-    width: 3vw;
-    height: 4vh;
-    font-size: 17px;
-    border: 1px solid rgb(69, 84, 104);
-    border-left: none;
-    cursor: pointer;
-  }
-
-  .search form i{
-      margin-left: 10px;
-  }
-
-  .third{
-      margin-right: 100px;
-  }
-
-/* End of Header */
-
-
-
-
-/* Biginning of Main */
-/*
-main{
-    padding: 75px 25px 0 25px;
-    display: grid;
-    grid-template-areas: 
-    "main-video recommended-videos"
-    "comments recommended-videos"
-    ;
-}
-
-/* Video, comments, description section (Left section) */
-/*
-.left-main-section{
-    grid-area: main-video;
-    width: 63vw;
-    margin: 0 20px 0 0;
-}
-
-.main-video-section{
-    border-bottom: 1px solid grey;
-    margin: 0 auto;
-}
-
-#main-video{
-    width: 100%;
-    height: 480px;
-    
-}
-*/
+ @media only screen and (min-width: 1200px) {
+   
+} 
